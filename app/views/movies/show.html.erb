@@ -2,7 +2,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @movie.image.thumb.url %>
+  <%= image_tag @movie.image_url.to_s %>
 </p>
 <h2><%= @movie.title %> (<%= link_to "edit", edit_movie_path(@movie) %>, <%= link_to "delete", movie_path(@movie), method: :delete, data: { confirm: "You sure?" } %>) | <%= @movie.review_average %>/10</h2>
 <h3><%= formatted_date(@movie.release_date) %></h3>

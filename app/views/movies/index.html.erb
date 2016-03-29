@@ -2,9 +2,10 @@
 <%= link_to "Submit a movie!", new_movie_path %>
 <hr>
 <% @movies.each do |movie| %>
+  <%= link_to image_tag(movie.poster_image_url), movie_path(movie) %>
   <p>
     <strong>Image:</strong>
-    <%= image_tag movie.image.thumb.url %>
+    <%= image_tag movie.image_url.to_s %>
   </p>
   <h2><%= link_to movie.title, movie_path(movie) %> | <%= movie.review_average %>/10</h2>
   <h3><%= formatted_date(movie.release_date) %></h3>

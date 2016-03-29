@@ -37,6 +37,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'tux'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rmagick'
 
 # Use unicorn as the app server
 # gem 'unicorn'
