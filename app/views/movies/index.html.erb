@@ -1,4 +1,16 @@
 <h1>Rotten Mangoes</h1>
+
+<%= link_to "View all Movies!", movies_path %>
+<p>Search for a Movie!</p>
+<%= form_tag movies_path, method: :get do %>
+  <%= text_field_tag :title, nil, placeholder: "By Title:" %>
+  <%= text_field_tag :director, nil, placeholder: "By Director:" %>
+  <%= select_tag(:runtime_in_minutes) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<br>
+
 <%= link_to "Submit a movie!", new_movie_path %>
 <hr>
 <% @movies.each do |movie| %>

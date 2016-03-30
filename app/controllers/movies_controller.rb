@@ -1,7 +1,15 @@
 class MoviesController < ApplicationController
 
   def index
-    @movies = Movie.all
+    if params[:title] && params[:director]
+      @movies = Movie.where("title LIKE ? AND director LIKE ?", "%#{params[:title]}%", "%#{params[:director]}%")
+    elsif params[:title]  
+      @movies = Movie.where("title LIKE ?", "%#{params[:title]}%")
+    elsif params[:director]
+      @movies = Movie.where("director LIKE ?", "%#{params[:director]}%")
+    else 
+      @movies = Movie.all
+    end
   end
 
   def show
