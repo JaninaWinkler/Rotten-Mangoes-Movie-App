@@ -36,7 +36,9 @@ class Movie < ActiveRecord::Base
       end
   end
 
-
+  scope :title_and_director_scope, ->(title, director) { where("title LIKE ? AND director LIKE ?", "%#{title}%", "#{director}") }
+  scope :title_scope, -> (title) { where("title LIKE ?", "%#{title}%")}
+  scope :director_scope, -> (director) { where("director LIKE ?", "%#{director}%")}
 
   protected
 
