@@ -3,6 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def account_destroyed_email(user)
     @user = user
+    @url = "http://rottenmangoes.com"
     mail(to: @user.email,
          subject: 'Account Destroyed',
          template_path: 'user_mailer',
