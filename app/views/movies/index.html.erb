@@ -1,15 +1,15 @@
-<h1>Rotten Mangoes</h1>
-
-<%= link_to "View all Movies!", movies_path %>
-<p>Search for a Movie!</p>
+<br>
+<br>
+<br>
+<br>
+<p class="search"> Search for a Movie!</p>
 <%= form_tag movies_path, method: :get do %>
   <%= text_field_tag :query, nil, placeholder: "By Title or Director:" %>
   <%= select_tag(:runtime_in_minutes, options_for_select([["Under 90 Minutes", 1], ["Between 90 and 120 Minutes", 2], ["Over 120 Minutes", 3]], 1)) %>
-  <%= submit_tag("Search") %>
+  <a class="waves-effect waves-light btn"><%= submit_tag("Search") %></a>
 <% end %>
 
 <br>
 
-<%= link_to "Submit a movie!", new_movie_path %>
 <hr>
 <%= render "movie" %>

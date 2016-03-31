@@ -1,14 +1,15 @@
 body {
-  background-color: #fff;
+  background-color: #e0f2f1;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-family: georgia, verdana, arial, helvetica, sans-serif;
+  font-size: 18px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-family: georgia, arial, helvetica, sans-serif;
+  font-color: #00695c;
+  font-size: 18px;
   line-height: 18px;
 }
 
@@ -31,7 +32,7 @@ a {
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -63,7 +64,8 @@ div {
     color: #fff;
   }
   ul li {
-    font-size: 12px;
-    list-style: square;
+    font-color: white;
+    font-size: 25px;
   }
 }
+

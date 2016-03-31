@@ -1,17 +1,17 @@
-<%= link_to "Back to all movies", movies_path %><br/>
-
-<p>
-  <strong>Image:</strong>
+<br>
+<br>
+<br>
+<div>
   <%= image_tag @movie.image_url(:thumb).to_s %>
-</p>
-<h2><%= @movie.title %> (<%= link_to "edit", edit_movie_path(@movie) %>, <%= link_to "delete", movie_path(@movie), method: :delete, data: { confirm: "You sure?" } %>) | <%= @movie.review_average %></h2>
-<h3><%= formatted_date(@movie.release_date) %></h3>
-<h4>Dir. <%= @movie.director %> | <%= @movie.runtime_in_minutes %> minutes</h4>
+</div>
+<h5><%= @movie.title %> (<%= link_to "edit", edit_movie_path(@movie) %>, <%= link_to "delete", movie_path(@movie), method: :delete, data: { confirm: "You sure?" } %>) | <%= @movie.review_average %></h5>
+<p><%= formatted_date(@movie.release_date) %></p>
+<p>Dir. <%= @movie.director %> | <%= @movie.runtime_in_minutes %> minutes</p>
 <p><%= @movie.description %></p>
 
 <hr>
 
-<h3>Reviews of <em><%= @movie.title %></em></h3>
+<h6>Reviews of <em><%= @movie.title %></em></h6>
 <% if current_user %>
   <% @movie.reviews.each do |review| %>
     <p><%= review.text %></p>

@@ -1,4 +1,7 @@
-<h1>Log In</h1>
+<br>
+<br>
+<br>
+<h4>Log In</h4>
 <%= form_tag session_path do %>
   <div>
     <%= label_tag "email" %><br/>
@@ -8,5 +11,7 @@
     <%= label_tag :password %><br/>
     <%= password_field_tag :password %>
   </div>
-  <div><%= submit_tag "Log In" %></div>
+  <a class="waves-effect waves-light btn"><%= submit_tag "Log In" %></a>
 <% end %>
+<br>
+<br>
