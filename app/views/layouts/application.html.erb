@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+</head>
+<body>
   <nav>
   <div class="nav">
-    <h1 class="brand-logo">Rotten Mangoes</h1>
+    <h1 class="brand-logo left"> ✩ Rotten Mangos ✩ </h1>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <br>
-        <br>
-        <br><li><%= link_to "View all Movies!", movies_path %></li>
+          <h5> ✇ Find, Review and Discover the Best Films!</h5>
+        <li><%= link_to "View all Movies!", movies_path %></li>
         <li><%= link_to "Submit a movie!", new_movie_path %></li>
       </ul>
   </div>
 </nav>
-</head>
-<body>
+  <br>
+  <br>
+<div class="container">
+  <br>
   <br>
   <br>
   <% flash.each do |key, value| %>
     <%= content_tag(:div, value) %>
   <% end %>
   <%= yield %>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
   <%= render 'layouts/footer' %>
 </body>
 </html>

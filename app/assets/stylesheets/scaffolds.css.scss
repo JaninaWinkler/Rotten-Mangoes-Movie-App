@@ -1,14 +1,14 @@
 body {
   background-color: #e0f2f1;
-  color: #333;
-  font-family: georgia, verdana, arial, helvetica, sans-serif;
+  color: #00897b;
+  font-family: 'Roboto', verdana, arial, helvetica, sans-serif;
   font-size: 18px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: georgia, arial, helvetica, sans-serif;
-  font-color: #00695c;
+  font-family: 'Roboto', arial, helvetica, sans-serif;
+  font-color: #00897b;
   font-size: 18px;
   line-height: 18px;
 }
@@ -20,15 +20,13 @@ pre {
 }
 
 a {
-  color: #000;
-  &:visited {
-    color: #666;
-  }
+  color: #00897b;
   &:hover {
     color: #fff;
     background-color: #000;
   }
 }
+
 
 div {
   &.field, &.actions {
@@ -48,11 +46,11 @@ div {
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid white;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #00897b;
   h2 {
     text-align: left;
     font-weight: bold;
@@ -69,3 +67,10 @@ div {
   }
 }
 
+.paginate {
+  background-color: #e0f2f1;
+}
+
+tr td {
+  font-size: 14px;
+}

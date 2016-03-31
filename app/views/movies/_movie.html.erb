@@ -1,13 +1,16 @@
+<div class="movies">
+<br>
 <% @movies.each do |movie| %>
     <div>
       <%= image_tag movie.image_url(:thumb).to_s %>
     </div>
     <h5><%= link_to movie.title, movie_path(movie) %> | <%= movie.review_average %></h5>
     <p><%= formatted_date(movie.release_date) %></p>
-    <p>Dir. <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</p>
+    <p>Director: <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</p>
     <p><%= movie.description %></p>
     <% if movie.poster_image_url.present? %>
     <p>Check it out at: <%= link_to movie.poster_image_url, movie.poster_image_url %></p>
     <% end %>
     <hr>
 <% end %>
+</div>

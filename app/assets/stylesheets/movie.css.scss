@@ -1,7 +1,8 @@
 p {
   &.search {
   color: #00897b;
-  font-size: 25px;
+  font-size: 37px;
+  text-indent: 10px;
   }
 }
 
@@ -9,10 +10,6 @@ p {
   background-color: #00897b;
   height: 140px;
   padding-left: 40px;
-  h1 {
-  font-size: 55px;
-  font-color: #e0f2f1
-  }
   ul li {
   font-color: #e0f2f1;
   font-size: 25px;
@@ -22,5 +19,36 @@ p {
 .footer {
   height: 60px;
   background-color: #00897b;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
+#runtime_in_minutes {
+  display: visible;
+}
+
+.movies {
+  img {
+    float: left;
+    margin-right: 30px;
+    max-height: 170px;
+  }
+}
+
+footer a {
+  color: white;
+  font-size: 25px;
+&:hover {
+  color: #fff;
+  background-color: #000;
+  }
+}
+
+
+.new-user {
+  color: #00897b;
+  font-size: 40px;
+  margin-left: 20px;
+}

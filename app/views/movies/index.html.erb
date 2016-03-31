@@ -1,15 +1,16 @@
+<div class="row">
+<form class="col s12">
 <br>
+<p class="search">Search for a Movie!</p>
 <br>
-<br>
-<br>
-<p class="search"> Search for a Movie!</p>
-<%= form_tag movies_path, method: :get do %>
-  <%= text_field_tag :query, nil, placeholder: "By Title or Director:" %>
-  <%= select_tag(:runtime_in_minutes, options_for_select([["Under 90 Minutes", 1], ["Between 90 and 120 Minutes", 2], ["Over 120 Minutes", 3]], 1)) %>
+<div class="input-field col s4"><%= form_tag movies_path, method: :get do %>
+  <%= text_field_tag :query, nil, placeholder: "By Title or Director:" %></div>
+  <div class="input-field col s4">
+    <%= select_tag(:runtime_in_minutes, options_for_select([["Under 90 Minutes", 1], ["Between 90 and 120 Minutes", 2], ["Over 120 Minutes", 3]]), :prompt => "By Length") %></div>
+  <br>
   <a class="waves-effect waves-light btn"><%= submit_tag("Search") %></a>
 <% end %>
+</form>
+</div>
 
-<br>
-
-<hr>
 <%= render "movie" %>

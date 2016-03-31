@@ -1,10 +1,16 @@
 class MoviesController < ApplicationController
 
   def index
-    if params[:query].present?
+    if params[:query].present? && params[:runtime_in_minutes].present?
+      @movies_with_runtime = Movie.movies_by_runtime(params[:runtime_in_minutes])
+      @movies = @movies_with_runtime.where("title LIKE ? OR director LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
+      puts "MOVIE"
+    elsif params[:query].present?
       @movies = Movie.where("title LIKE ? OR director LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
+      puts ":query"
     elsif params[:runtime_in_minutes].present?
       @movies = Movie.movies_by_runtime(params[:runtime_in_minutes])
+    puts "runtime"
     else 
       @movies = Movie.all
     end

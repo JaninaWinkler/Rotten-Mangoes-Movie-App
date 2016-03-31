@@ -1,13 +1,10 @@
-<br>
-<br>
-<br>
-<div>
+<div class="movies">
   <%= image_tag @movie.image_url(:thumb).to_s %>
-</div>
 <h5><%= @movie.title %> (<%= link_to "edit", edit_movie_path(@movie) %>, <%= link_to "delete", movie_path(@movie), method: :delete, data: { confirm: "You sure?" } %>) | <%= @movie.review_average %></h5>
 <p><%= formatted_date(@movie.release_date) %></p>
-<p>Dir. <%= @movie.director %> | <%= @movie.runtime_in_minutes %> minutes</p>
+<p>Director: <%= @movie.director %> | <%= @movie.runtime_in_minutes %> minutes</p>
 <p><%= @movie.description %></p>
+</div>
 
 <hr>
 
@@ -18,6 +15,8 @@
     <p><%= review.rating_out_of_ten %>/10</p>
     <small>- <%= review.user.full_name %></small><br/>
   <% end %>
+  <br>
+  <br>
   <p><%= link_to "Write a review!", new_movie_review_path(@movie) %></p>
 <% else %>
   <p>Please <%= link_to "log in", new_session_path %> to see reviews and add your own.</p> 
