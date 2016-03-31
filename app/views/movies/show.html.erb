@@ -4,7 +4,7 @@
   <strong>Image:</strong>
   <%= image_tag @movie.image_url(:thumb).to_s %>
 </p>
-<h2><%= @movie.title %> (<%= link_to "edit", edit_movie_path(@movie) %>, <%= link_to "delete", movie_path(@movie), method: :delete, data: { confirm: "You sure?" } %>) | <%= @movie.review_average %>/10</h2>
+<h2><%= @movie.title %> (<%= link_to "edit", edit_movie_path(@movie) %>, <%= link_to "delete", movie_path(@movie), method: :delete, data: { confirm: "You sure?" } %>) | <%= @movie.review_average %></h2>
 <h3><%= formatted_date(@movie.release_date) %></h3>
 <h4>Dir. <%= @movie.director %> | <%= @movie.runtime_in_minutes %> minutes</h4>
 <p><%= @movie.description %></p>
