@@ -19,9 +19,11 @@ class Movie < ActiveRecord::Base
 
   def review_average
     if reviews.size == 0
-      "There have been no reviews for this movie.."
+      "There have been no reviews for this movie."
+      
     else
-      reviews.sum(:rating_out_of_ten)/reviews.size
+      average = reviews.sum(:rating_out_of_ten)/reviews.size
+      "Review Average: #{average} / 10"
     end
   end
 
