@@ -1,3 +1,22 @@
+User.create!([
+  {email: "ninawinkler@me.com", password_digest: "$2a$10$/93yXdfj174a2LdXAsuiu.5C.Qq/uSIxPWQLF1.ERSdZQz8QA8gRC", firstname: "Nina", lastname: "Winkler", admin: false},
+  {email: "admin@admin.com", password_digest: "$2a$10$QPdfrQWVg2w1ROxeGwNLte6jmsqjJDotNd0kdMn/9raeois9ExnAe", firstname: "Sarah", lastname: "Johnson", admin: true},
+  {email: "jim@me.com", password_digest: "$2a$10$Ze/h8IgPMu9pgKsrU095JO5Lrz7M2x5VftytxFTRS/cy3b.74dJGy", firstname: "Jim", lastname: "Ackles", admin: false},
+  {email: "sarah@me.com", password_digest: "$2a$10$zkXzxY3mYfpidspCjqocUOyk1VWSvD9nYgsrA.67T5KyoUSPiuc8a", firstname: "Sarah", lastname: "Lakewood", admin: false},
+  {email: "movie@me.com", password_digest: "$2a$10$UIyD1uHqZ2aOnBDhXkgpXOvDW4RKh0MVtIh/VVXHWLIkAD0m.LR4m", firstname: "Lisa", lastname: "Spring", admin: false},
+  {email: "davey@me.com", password_digest: "$2a$10$l8RMddLe3CooNufMjmyPjO6S1/5ChPYyon7joiSLZBf5u4ekq9dGy", firstname: "Davey", lastname: "Feimer", admin: false},
+  {email: "davey@helps.com", password_digest: "$2a$10$BymTlyMuesuuj8qQHhyRk.tThBQKnb9wGnD3dcQyAoe0JLN8wUFxm", firstname: "David", lastname: "Leigh", admin: false},
+  {email: "boolean@me.com", password_digest: "$2a$10$7oDQuoXXOpbPSRqfYk8LmOabhQvUfIiTHUL3GoQXin8PGeqlsJ6JC", firstname: "Julian", lastname: "Prince", admin: true},
+  {email: "newuser@me.com", password_digest: "$2a$10$ha/aeECRD41jctJov.VJ6eFOquvPdQ9gN3T96Fra8oofhqrOWa0a6", firstname: "Margaret", lastname: "Peters", admin: false},
+  {email: "Jill@me.com", password_digest: "$2a$10$6T6OR6.hN3QpKgzbSufBq.eAd7rfy.4.1GGcdZGP849F5iBWaagS6", firstname: "Jill", lastname: "Savage", admin: false},
+  {email: "newadmin@admin.com", password_digest: "$2a$10$BxucZ4iM.hZvShtXMo.cyOwI7Yq9NYxBxhp54bpt3cv15iOUZ1Fi6", firstname: "Darcy", lastname: "Fell", admin: true},
+  {email: "scott@me.com", password_digest: "$2a$10$EjxoSoKRbqsvzkPzRzmX3u3s09qFvaqoRODCkh4xw4M4yDM7o5es6", firstname: "Scott", lastname: "Chattertown", admin: false},
+  {email: "jessica@me.com", password_digest: "$2a$10$HxtTv20ep2YoS8pqe.cW6OopToEyDjB8MxFtZhFLoziI6QKSB.sCS", firstname: "Jessica", lastname: "James", admin: false},
+  {email: "jen@me.com", password_digest: "$2a$10$FzueCHf91Y0XTQOgOS1tbOdCncF.DNOAQCDSs/j/BC1eFToC2CPWW", firstname: "Jennifer", lastname: "West", admin: false},
+  {email: "tim@me.com", password_digest: "$2a$10$o2ZKoCU4bqj7ghOFu.GBYey3zUXyT6iEPGBEtVIehzOa.Wux9.prC", firstname: "Tim", lastname: "Finley", admin: false},
+  {email: "chris@me.com", password_digest: "$2a$10$WQ/1AucjBaFeQkU5oB52a.R.b1Jmwm9Ex0ZFe1E35JxdKBR61emAO", firstname: "Chris ", lastname: "Nixon", admin: true},
+  {email: "don@me.com", password_digest: "$2a$10$DOx54x/FUQnh7SQI4afeeujx2IihJN5X7Xma/N3RLQTcrmIDlrZey", firstname: "Don", lastname: "Finatzer", admin: true}
+])
 Movie.create!([
   {title: "Room", director: "Lenny Abrahamson", runtime_in_minutes: 118, description: "A kidnapped mother and son escape from a room in which they have endured imprisonment for the entirety of her son's life. Upon breaking free from its confines, they experience a dramatic homecoming; provoking insight into the depths of imagination and the extent of a mother's love.", poster_image_url: "http://www.imdb.com/title/tt3170832/?ref_=tt_rec_tt", release_date: "2015-12-12 00:00:00", image: "room.jpeg"},
   {title: "Spotlight", director: "Tom McCarthy", runtime_in_minutes: 128, description: "The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese, shaking the entire Catholic Church to its core.", poster_image_url: "http://www.imdb.com/title/tt1895587/?ref_=tt_rec_tt", release_date: "2016-01-12 00:00:00", image: "Spotlight.jpg"},
@@ -23,23 +42,4 @@ Review.create!([
   {user_id: 4, movie_id: 19, text: "An entertaining film about the business world. Very accurate, witty and interesting. The All-Star cast had great chemistry and genuine, human flaws.", rating_out_of_ten: 7},
   {user_id: 4, movie_id: 5, text: "Mind-boggling and interesting film. Really makes you think about humanity. ", rating_out_of_ten: 7},
   {user_id: 23, movie_id: 22, text: "Funny, charming and a delight to watch. Jennifer Lawrence is exhilarating. ", rating_out_of_ten: 9}
-])
-User.create!([
-  {email: "ninawinkler@me.com", password_digest: "$2a$10$/93yXdfj174a2LdXAsuiu.5C.Qq/uSIxPWQLF1.ERSdZQz8QA8gRC", firstname: "Nina", lastname: "Winkler", admin: false},
-  {email: "admin@admin.com", password_digest: "$2a$10$QPdfrQWVg2w1ROxeGwNLte6jmsqjJDotNd0kdMn/9raeois9ExnAe", firstname: "Sarah", lastname: "Johnson", admin: true},
-  {email: "jim@me.com", password_digest: "$2a$10$Ze/h8IgPMu9pgKsrU095JO5Lrz7M2x5VftytxFTRS/cy3b.74dJGy", firstname: "Jim", lastname: "Ackles", admin: false},
-  {email: "sarah@me.com", password_digest: "$2a$10$zkXzxY3mYfpidspCjqocUOyk1VWSvD9nYgsrA.67T5KyoUSPiuc8a", firstname: "Sarah", lastname: "Lakewood", admin: false},
-  {email: "movie@me.com", password_digest: "$2a$10$UIyD1uHqZ2aOnBDhXkgpXOvDW4RKh0MVtIh/VVXHWLIkAD0m.LR4m", firstname: "Lisa", lastname: "Spring", admin: false},
-  {email: "davey@me.com", password_digest: "$2a$10$l8RMddLe3CooNufMjmyPjO6S1/5ChPYyon7joiSLZBf5u4ekq9dGy", firstname: "Davey", lastname: "Feimer", admin: false},
-  {email: "davey@helps.com", password_digest: "$2a$10$BymTlyMuesuuj8qQHhyRk.tThBQKnb9wGnD3dcQyAoe0JLN8wUFxm", firstname: "David", lastname: "Leigh", admin: false},
-  {email: "boolean@me.com", password_digest: "$2a$10$7oDQuoXXOpbPSRqfYk8LmOabhQvUfIiTHUL3GoQXin8PGeqlsJ6JC", firstname: "Julian", lastname: "Prince", admin: true},
-  {email: "newuser@me.com", password_digest: "$2a$10$ha/aeECRD41jctJov.VJ6eFOquvPdQ9gN3T96Fra8oofhqrOWa0a6", firstname: "Margaret", lastname: "Peters", admin: false},
-  {email: "Jill@me.com", password_digest: "$2a$10$6T6OR6.hN3QpKgzbSufBq.eAd7rfy.4.1GGcdZGP849F5iBWaagS6", firstname: "Jill", lastname: "Savage", admin: false},
-  {email: "newadmin@admin.com", password_digest: "$2a$10$BxucZ4iM.hZvShtXMo.cyOwI7Yq9NYxBxhp54bpt3cv15iOUZ1Fi6", firstname: "Darcy", lastname: "Fell", admin: true},
-  {email: "scott@me.com", password_digest: "$2a$10$EjxoSoKRbqsvzkPzRzmX3u3s09qFvaqoRODCkh4xw4M4yDM7o5es6", firstname: "Scott", lastname: "Chattertown", admin: false},
-  {email: "jessica@me.com", password_digest: "$2a$10$HxtTv20ep2YoS8pqe.cW6OopToEyDjB8MxFtZhFLoziI6QKSB.sCS", firstname: "Jessica", lastname: "James", admin: false},
-  {email: "jen@me.com", password_digest: "$2a$10$FzueCHf91Y0XTQOgOS1tbOdCncF.DNOAQCDSs/j/BC1eFToC2CPWW", firstname: "Jennifer", lastname: "West", admin: false},
-  {email: "tim@me.com", password_digest: "$2a$10$o2ZKoCU4bqj7ghOFu.GBYey3zUXyT6iEPGBEtVIehzOa.Wux9.prC", firstname: "Tim", lastname: "Finley", admin: false},
-  {email: "chris@me.com", password_digest: "$2a$10$WQ/1AucjBaFeQkU5oB52a.R.b1Jmwm9Ex0ZFe1E35JxdKBR61emAO", firstname: "Chris ", lastname: "Nixon", admin: true},
-  {email: "don@me.com", password_digest: "$2a$10$DOx54x/FUQnh7SQI4afeeujx2IihJN5X7Xma/N3RLQTcrmIDlrZey", firstname: "Don", lastname: "Finatzer", admin: true}
 ])
