@@ -37,11 +37,11 @@ gem 'mini_magick'
 gem 'rmagick'
 gem 'kaminari'
 
-gem 'sqlite3', group: :development
-gem 'pg', group: :production
+gem 'pg'
 gem 'rails_12factor'
 
 gem 'sass-rails', '~> 4.0.3'
+gem 'seed_dump', '~> 3.2', '>= 3.2.4'
 
 
 
